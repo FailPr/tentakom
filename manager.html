@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="icon" href="http://example.com/favicon.png" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/manager.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="media/logo.png" />
+      <h3>MANAGER</h3>
+    </div>
+    <div class="doubleDiv">
+      <h3>Δημιουργία/Διαγραφή Είδους</h3>
+      <select id="kindOfSelect">
+        <option disabled selected>Επιλέξτε είδος για διαγραφή</option>
+      </select>
+      <input placeholder="Δημιουργήστε ένα νέο είδος" />
+      <div class="actionButtons">
+        <button
+          value="addKindOf"
+          onclick="addToDatabaseKindOf()"
+          class="blueBG"
+        >
+          Δημιουργία
+        </button>
+        <button class="pinkBG" onclick="deleteSelectedFromDb('deleteKind')">
+          Διαγραφή επιλεγμένου
+        </button>
+      </div>
+    </div>
+    <div class="doubleDiv">
+      <h3>Δημιουργία/Διαγραφή Θέματος</h3>
+      <select id="subjectSelect">
+        <option disabled selected>Επιλέξτε Θέμα για διαγραφή</option>
+      </select>
+      <input placeholder="Δημιουργήστε ένα νέο Θέμα" />
+      <div class="actionButtons">
+        <button onclick="addToDatabaseSubject()" class="blueBG">
+          Δημιουργία
+        </button>
+        <button class="pinkBG" onclick="deleteSelectedFromDb('deleteSubject')">
+          Διαγραφή επιλεγμένου
+        </button>
+      </div>
+    </div>
+    <div class="doubleDiv">
+      <h3>Επεξεργασία Θέματος</h3>
+      <select id="editSubjectSelect" onchange="loadSubjectList(this.value)">
+        <option disabled selected>Επιλέξτε Θέμα για επεξεργασία</option>
+      </select>
+      <div class="editSubjectDiv">
+        <ol id="itemsList"></ol>
+      </div>
+      <div class="subjectEditActionBtns">
+        <button onclick="addItemTolist()" id="addOption">+</button>
+        <button onclick="saveListToDb()" id="saveOptionsBtn">Αποθήκευση</button>
+      </div>
+    </div>
+    <script src="js/manager.js"></script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="icon" href="http://example.com/favicon.png" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="headerLogoImg"><img src="logo.png" alt="" /></div>
+      <div class="headerContent">
+        <br />
+        <span contenteditable>Θεσσαλονίκη Τούμπα</span>
+        <span contenteditable>Τ.Κ. 54454, Παπάφη 143</span>
+        <span contenteditable>info@tentakom.gr</span>
+        <span contenteditable>2310 927 444</span>
+      </div>
+    </div>
+    <div class="sendInfo">
+      <span contenteditable="true">Πρός: </span>
+      <div class="subjectDiv">
+        <span contenteditable="true">Θέμα:</span>
+
+        <select onchange="updateSubjectList(this.value)" id="subjectSelect">
+          <option>Διαλέξτε θέμα</option>
+        </select>
+      </div>
+    </div>
+    <div class="tableDiv">
+      <table id="customers">
+        <tr>
+          <th style="position: relative">
+            A/A <button onclick="addTableRow()" class="addRowButton">+</button>
+          </th>
+          <th>Είδος - Περιγραφή</th>
+          <th>Μήκος</th>
+          <th>Πλάτος</th>
+          <th>Τ.Μ.</th>
+          <th>Τεμάχια</th>
+          <th>Κόστος</th>
+        </tr>
+        <tr id="firstLastRow" hidden>
+          <td colspan="4"><span>Σύνολα</span></td>
+          <td><span>-</span></td>
+          <td><span id="sumTemaxia" contenteditable="true">0</span></td>
+          <td><span id="kostos" contenteditable="true">0</span></td>
+        </tr>
+        <tr id="secondLastRow" hidden>
+          <td colspan="5" style="border: none; background: white"></td>
+          <td><span>ΦΠΑ</span></td>
+          <td><span id="vat" contenteditable="true">0</span></td>
+        </tr>
+        <tr id="thirdLastRow" hidden>
+          <td colspan="5" style="border: none; background: white"></td>
+          <td><span>Σύνολο</span></td>
+          <td><span id="sumKostosVat" contenteditable="true">0</span></td>
+        </tr>
+      </table>
+      <div class="features">
+        <h4 style="margin: 2px; margin-left: 0px">
+          ΠΑΡΑΤΗΡΗΣΕΙΣ ΕΡΓΟΥ - ΧΑΡΑΚΤΗΡΙΣΤΙΚΑ
+        </h4>
+        <span style="font-size: 13px"
+          >ΣΤΗΝ ΤΙΜΗ ΣΥΜΠΕΡΙΛΑΜΒΑΝΟΝΤΑΙ ΤΑ ΕΞΗΣ:</span
+        >
+        <ol id="subjectList">
+          <button onclick="addItemToList()" id="buttonAddItemList">+</button>
+          <li><span>Διαλέξτε θέμα</span></li>
+        </ol>
+      </div>
+      <div class="notesInfo">
+        <h4 style="margin-bottom: 2px">Σημειώσεις:</h4>
+        <ol>
+          <li>
+            <span contenteditable="true"
+              >Χρόνος παράδοσης 40 ημέρες (από την ημέρα παραγγελίας)</span
+            >
+          </li>
+          <li>
+            <span contenteditable="true"
+              >Η παραπάνω προσφορά ισχύει για 30 ημέρες</span
+            >
+          </li>
+          <li>
+            <span contenteditable="true">
+              Τρόπος πληρωμής: 50% προκαταβολή και εξόφληση με την παράδοση του
+              έργου.</span
+            >
+          </li>
+          <li>
+            <span contenteditable="true"
+              >Όλα μας τα προϊόντα είναι πιστοποιημένα και με εγγύηση.</span
+            >
+          </li>
+        </ol>
+      </div>
+      <div class="bankInfo">
+        <span contenteditable="true">Τραπεζικοί Λογαριασμοί:</span><br />
+        <span contenteditable="true"
+          >Eurobank: GR7402601250000810200938538 BIC: ERBKGRAAXXX</span
+        >
+      </div>
+      <div class="footerLeft">
+        <span contenteditable="true">Υπεύθυνος Κατασκευών </span
+        ><span contenteditable="true">Πεφτούλογλου Αναστάσιος</span
+        ><span contenteditable="true">6945 695 641</span>
+      </div>
+      <div class="footerRigth">
+        <span contenteditable="true">Υπεύθυνος Κατασκευών </span
+        ><span contenteditable="true">Πεφτούλογλου Αναστάσιος</span
+        ><span contenteditable="true">6945 695 641</span>
+      </div>
+      <span id="webSiteBottomCenter">https://tentakom.gr/</span>
+    </div>
+    <div class="actions">
+      <button class="yellowBG" onclick="window.print();">Εκτύπωση</button>
+      <button
+        class="blueBG"
+        onclick='  window.open(
+        "http://192.168.1.16/tentakom/manager.html", "_blank");'
+      >
+        MANAGER
+      </button>
+      <button onclick="saveDialog()">Αποθήκευση</button>
+      <select onchange="loadDataOnChange(this)" id="loadNamesSelect"></select>
+    </div>
+  </body>
+  <script src="js/index.js"></script>
+  <script src="js/table.js"></script>
+  <script src="js/sum.js"></script>
+  <script src="js/save.js"></script>
+  <script src="js/load.js"></script>
+  <script src="js/overflow.js"></script>
+</html>
