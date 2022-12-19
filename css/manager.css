@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+* {
+  font-family: "Fira Sans", sans-serif;
+}
+body {
+  font-family: "Fira Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.header {
+  margin-top: 25px;
+  text-align: center;
+}
+.header > h3 {
+  margin-top: 5px;
+}
+.doubleDiv {
+  position: relative;
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 190px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  box-shadow: 0px 0px 2.2px rgba(0, 0, 0, 0.039),
+    0px 0px 5.3px rgba(0, 0, 0, 0.057), 0px 0px 10px rgba(0, 0, 0, 0.07),
+    0px 0px 17.9px rgba(0, 0, 0, 0.083), 0px 0px 33.4px rgba(0, 0, 0, 0.101),
+    0px 0px 80px rgba(0, 0, 0, 0.14);
+}
+.doubleDiv > input,
+select {
+  padding: 5px;
+}
+.doubleDiv::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 3px;
+  left: 3px;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 5px;
+  z-index: -1;
+}
+.doubleDiv > span {
+  font-weight: 900;
+  margin: 15px;
+}
+.doubleDiv > select {
+  width: 95%;
+  margin: 5px;
+}
+.doubleDiv > input {
+  width: 91%;
+  margin: 5px;
+}
+.actionButtons {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.actionButtons > button {
+  margin: 5px;
+  width: 50%;
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.actionButtons > button:hover {
+  transform: scale(1.02);
+}
+.actionButtons > button:active {
+  transform: scale(1);
+}
+.subjectEditActionBtns {
+  position: relative;
+  width: 100%;
+}
+#addOption {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #06d6a0;
+  font-weight: 900;
+}
+#addOption:active {
+  scale: 0.9;
+}
+#saveOptionsBtn {
+  margin: 5px;
+  position: absolute;
+  bottom: 5px;
+  border-radius: 5px;
+  border: 2px solid black;
+  right: 5px;
+  padding: 3px;
+  background-color: #00bbf9;
+  cursor: pointer;
+}
+#saveOptionsBtn:active {
+  scale: 0.9;
+}
+.editSubjectDiv {
+  position: relative;
+  width: 95%;
+  text-align: left;
+  min-height: 50px;
+  margin: 10px;
+}
+.editSubjectDiv > ol {
+  margin-bottom: 30px;
+}
+.blueBG {
+  background-color: #00bbf9;
+}
+.pinkBG {
+  background-color: #ef476f;
+}
+.greenBG {
+  background-color: #06d6a0;
+}
+.greenText {
+  color: #06d6a0;
+}
+.pinkText {
+  color: #ef476f;
+}
+span {
+  letter-spacing: 0.01ch;
+}
+li {
+  position: relative;
+}
+.deleteListItemButton {
+  position: absolute;
+  right: 0;
+  height: 15px;
+  top: 0;
+  display: flex;
+  border: 2px solid black;
+  border-radius: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  .doubleDiv {
+    min-width: 95%;
+    max-width: 95%px;
+  }
+}
