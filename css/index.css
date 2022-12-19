@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+@media print {
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 !important;
+  }
+  body {
+    border: none !important;
+    zoom: 100% !important;
+    margin-left: 0px !important;
+  }
+  /* ... the rest of the rules ... */
+  button {
+    display: none !important;
+  }
+  select {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+  }
+
+  /* For IE10 */
+  select::-ms-expand {
+    display: none;
+  }
+  .actions {
+    display: none !important;
+  }
+  th {
+    position: inherit !important;
+  }
+}
+#customers {
+  font-family: "Fira Sans", sans-serif;
+  border-collapse: collapse;
+
+  margin-top: 15px;
+  margin-left: -5px;
+  margin-right: 0;
+  margin-bottom: 0px;
+  width: 102%;
+}
+
+#customers td,
+#customers th {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 5px;
+
+  text-align: center;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+* {
+  font-family: "Fira Sans", sans-serif;
+}
+body {
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  border: 3px solid rgb(0, 0, 0);
+  font-family: "Fira Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  margin-top: 5px;
+  zoom: 70%;
+  margin-left: 5px;
+}
+select {
+  border: none;
+  background-color: transparent;
+}
+
+select:focus-visible {
+  background-color: transparent;
+}
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 50px 0px 0px;
+  text-align: right;
+}
+.headerContent > span {
+  margin: 1px;
+}
+
+.headerLogoImg {
+  margin: 0px 0px 0px 50px;
+}
+.sendInfo {
+  margin-top: 10px;
+  width: 100%;
+}
+.sendInfo > span {
+  margin-bottom: 10px;
+  display: block;
+  margin-left: 50px;
+}
+.sendInfo > div {
+  margin-left: 50px;
+}
+.features {
+  margin: 30px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.notesInfo {
+  margin: 30px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.bankInfo {
+  margin: 30px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+.footerLeft {
+  display: flex;
+  flex-direction: column;
+  bottom: 10px;
+  position: absolute;
+  left: 40px;
+}
+.footerRigth {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+}
+#webSiteBottomCenter {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+ol {
+  margin-top: 2px;
+  margin-bottom: 10px;
+  position: relative;
+}
+#buttonAddItemList {
+  position: absolute;
+  border: 2px solid black;
+  font-size: 18px;
+  border-radius: 5px;
+  bottom: -30px;
+  left: 50%;
+  background: #04aa6d;
+  color: white;
+  cursor: pointer;
+}
+
+.yellowBG {
+  background-color: #fedb39;
+}
+.blueBG {
+  background-color: #00bbf9;
+}
+.pinkBG {
+  background-color: #ef476f;
+}
+.greenBG {
+  background-color: #06d6a0;
+}
+.greenText {
+  color: #06d6a0;
+}
+.pinkText {
+  color: #ef476f;
+}
+.kindOfSelect {
+  width: 300px;
+}
+.spanWrap {
+  word-break: break-all;
+}
+.addRowButton {
+  position: absolute;
+  left: -34px;
+  top: 0;
+  border: 2px solid black;
+  font-size: 20px;
+  background-color: #04aa6d;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.deleteRowButton {
+  position: absolute;
+  left: -33px;
+  top: 10px;
+  border: 2px solid black;
+  font-size: 16px;
+  background-color: #ef476f;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 10px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  width: 20px;
+}
+.actions {
+  position: absolute;
+  width: 100px;
+  top: -2px;
+  right: -115px;
+  border-radius: 5px;
+  border: 3px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.actions > button {
+  margin: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.overflowWindow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #ffffffd7;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.saveDialog {
+  display: flex;
+  flex-direction: column;
+}
+.saveDialog > input {
+  padding: 5px;
+  margin: 5px;
+}
+.saveDialog > button {
+  padding: 5px;
+  margin: 5px;
+  background-color: #00bbf9;
+  cursor: pointer;
+  font-weight: 900;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+#loadNamesSelect{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
